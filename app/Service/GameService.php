@@ -19,22 +19,19 @@ class GameService
         $list = Db::table("idiom_question")
             ->select(["idiom_question.id", "nandu", "idiom_question.answer", "idiom.pic"])
             ->leftJoin('idiom', 'idiom_question.idoim_id', '=', 'idiom.id')
-            ->inRandomOrder()
-            ->get()
-            ->toArray();
+            // ->inRandomOrder()
+            ->paginate(5);
+        // ->toArray();
         return $list;
     }
     /**
      * 
      */
-    public function getAll($limit=50)
+    public function getAll($limit = 50)
     {
-
     }
 
     public function checkByAnswer($question_id, $answer)
     {
-
     }
-
 }

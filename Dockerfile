@@ -25,7 +25,7 @@ RUN set -ex \
     && php -m \
     && php --ri swoole \
     #  ---------- some config ----------
-    && cd /etc/php8 \
+    && cd /etc/php81 \
     # - config PHP
     && { \
         echo "upload_max_filesize=128M"; \
@@ -48,7 +48,7 @@ WORKDIR /opt/www
 
 COPY . /opt/www
 RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
-# RUN composer install --no-dev -o && php bin/hyperf.php
+RUN composer install --no-dev -o && php bin/hyperf.php
 
 EXPOSE 9501
 

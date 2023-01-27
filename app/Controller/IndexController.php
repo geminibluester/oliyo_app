@@ -9,10 +9,13 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace App\Controller;
+
 use Hyperf\Di\Annotation\Inject;
 use App\Model\IdiomQuestion;
 use App\Service\GameService;
+
 class IndexController extends AbstractController
 {
     /**
@@ -20,7 +23,7 @@ class IndexController extends AbstractController
      * 
      * @var GameService
      */
-    private GameService $game ;
+    private GameService $game;
     public function index()
     {
         $qustions = $this->game->getNormalList();

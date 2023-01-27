@@ -74,11 +74,11 @@ class Response implements ResponseInterface
     }
 
     /**
-     * @param array $data
+     * @param array|oject $data
      * @param string|null $msg
      * @return PsrResponseInterface
      */
-    public function success(array $data = [], string $msg = null): PsrResponseInterface
+    public function success($data, string $msg = null): PsrResponseInterface
     {
         $msg = $msg ?? StatusCode::getMessage(StatusCode::SUCCESS);
         $data = array(

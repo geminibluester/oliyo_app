@@ -17,6 +17,7 @@
         "hyperf/command": "~2.2.0",
         "hyperf/config": "~2.2.0",
         "hyperf/constants": "^2.2",
+        "hyperf/contract": "^2.1",
         "hyperf/database": "~2.2.0",
         "hyperf/db-connection": "~2.2.0",
         "hyperf/framework": "~2.2.0",
@@ -24,8 +25,10 @@
         "hyperf/http-server": "~2.2.0",
         "hyperf/logger": "~2.2.0",
         "hyperf/memory": "~2.2.0",
+        "hyperf/paginator": "^2.1",
         "hyperf/process": "~2.2.0",
-        "hyperf/redis": "~2.2.0"
+        "hyperf/redis": "~2.2.0",
+        "hyperf/websocket-server": "^2.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
@@ -75,6 +78,9 @@
         "start": [
             "Composer\\Config::disableProcessTimeout",
             "php ./bin/hyperf.php start"
-        ]
+        ],
+	"dev":[
+	    "php ./bin/hyperf.php server:watch"	
+	]
     }
 }
