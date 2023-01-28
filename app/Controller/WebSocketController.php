@@ -14,7 +14,7 @@ use Swoole\WebSocket\Server as WebSocketServer;
 
 class WebSocketController implements OnMessageInterface, OnOpenInterface, OnCloseInterface
 {
-    public function onMessage($server, Frame $frame): void
+    public function onMessage($server, $frame): void
     {
         $server->push($frame->fd, 'Recv: ' . $frame->data);
         var_dump($frame->fd, $frame->data);
@@ -25,7 +25,7 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
         var_dump('closed');
     }
 
-    public function onOpen($server, Request $request): void
+    public function onOpen($server, $request): void
     {
         $server->push($request->fd, 'Opened');
     }

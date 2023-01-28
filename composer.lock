@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "542188d6d0f5ba03d2f633b5c87a0d12",
+    "content-hash": "ad220648109eca0155ba272f2940807f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -621,19 +621,19 @@
         },
         {
             "name": "hyperf/cache",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/cache/v2.2.33/hyperf-cache-v2.2.33.zip",
-                "reference": "5d133778db7b38bd40be8ef970dcb2d75a5b68ed",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/cache/v3.0.0/hyperf-cache-v3.0.0.zip",
+                "reference": "bba789fc11d7ca2a20ae76cf87d9476be2011344",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
-                "psr/simple-cache": "^1.0"
+                "psr/simple-cache": "^1.0|^2.0|^3.0"
             },
             "suggest": {
                 "hyperf/di": "Use cache annotations.",
@@ -642,7 +642,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Cache\\ConfigProvider"
@@ -663,22 +663,76 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-22T04:45:19+00:00"
         },
         {
-            "name": "hyperf/command",
-            "version": "v2.2.35",
+            "name": "hyperf/code-generator",
+            "version": "v0.3.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/command/v2.2.35/hyperf-command-v2.2.35.zip",
-                "reference": "48cd9789166ecf5f3009de45bcf128b997ec5f88",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/code-generator/v0.3.3/hyperf-code-generator-v0.3.3.zip",
+                "reference": "9d1b68fb6e227c469af2fc5b88ab7f21421291a1",
                 "shasum": ""
             },
             "require": {
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "doctrine/annotations": "^1.13",
+                "hyperf/command": ">=2.2",
+                "nikic/php-parser": "^4.10",
+                "php": ">=8.0",
+                "symfony/finder": "^5.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "hyperf/config": ">=2.2",
+                "hyperf/di": ">=2.2",
+                "hyperf/http-server": ">=2.2",
+                "hyperf/ide-helper": ">=2.2",
+                "mockery/mockery": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": ">=7.0",
+                "swoole/ide-helper": "dev-master",
+                "swow/swow": "dev-develop",
+                "symfony/var-dumper": "^5.1"
+            },
+            "bin": [
+                "bin/regenerate-models.php"
+            ],
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Hyperf\\CodeGenerator\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\CodeGenerator\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Code Generator for Hyperf",
+            "keywords": [
+                "code generator",
+                "hyperf",
+                "php"
+            ],
+            "time": "2021-12-27T05:27:03+00:00"
+        },
+        {
+            "name": "hyperf/command",
+            "version": "v3.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/command/v3.0.0/hyperf-command-v3.0.0.zip",
+                "reference": "3bb67fd9e776b2987e2b2daf47f55987ad322122",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/event-dispatcher": "^1.0",
-                "symfony/console": ">=5.0 <5.4.12"
+                "symfony/console": "^5.0|^6.0"
             },
             "suggest": {
                 "hyperf/di": "Required to use annotations."
@@ -686,7 +740,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -703,23 +757,23 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-08-27T07:28:56+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/config",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/config/v2.2.33/hyperf-config-v2.2.33.zip",
-                "reference": "9437f45aea36358840c907691e9b28492550e9a3",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/config/v3.0.0/hyperf-config-v3.0.0.zip",
+                "reference": "dbab570287af7b7d79967446b7f4703c4ffaba8e",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
-                "symfony/finder": "^5.0"
+                "symfony/finder": "^5.0|^6.0"
             },
             "suggest": {
                 "hyperf/di": "Allows using @Value annotation",
@@ -730,7 +784,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Config\\ConfigProvider"
@@ -756,21 +810,21 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-08-30T06:33:36+00:00"
         },
         {
             "name": "hyperf/constants",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/constants/v2.2.33/hyperf-constants-v2.2.33.zip",
-                "reference": "adb652d446bde384af9ad907cfabe900f3dd08b8",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/constants/v3.0.0/hyperf-constants-v3.0.0.zip",
+                "reference": "561a5e509cfdc08323b21f8d6fd4e9f11b941906",
                 "shasum": ""
             },
             "require": {
-                "hyperf/di": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2"
+                "hyperf/di": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0"
             },
             "suggest": {
                 "hyperf/translation": "Required to use translation."
@@ -778,7 +832,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Constants\\ConfigProvider"
@@ -799,25 +853,25 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/context",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/context/v2.2.33/hyperf-context-v2.2.33.zip",
-                "reference": "f2e77442693a07d47f7ca97f8b2fdb8e17196a47",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/context/v3.0.0/hyperf-context-v3.0.0.zip",
+                "reference": "95cd634ece12f1f4898d10815060090191d59527",
                 "shasum": ""
             },
             "require": {
-                "hyperf/engine": "^1.1",
-                "php": ">=7.2"
+                "hyperf/engine": "^1.2|^2.0",
+                "php": ">=8.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -836,24 +890,24 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/contract",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/contract/v2.2.33/hyperf-contract-v2.2.33.zip",
-                "reference": "1ebf037c91d76ec05af9e5cb3335b0f5ec810e27",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/contract/v3.0.0/hyperf-contract-v3.0.0.zip",
+                "reference": "ec465d74f94341ff9b979cc4a3f0e2ededc05040",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2"
+                "php": ">=8.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -871,22 +925,59 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
-            "name": "hyperf/database",
-            "version": "v2.2.37",
+            "name": "hyperf/coordinator",
+            "version": "v3.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/database/v2.2.37/hyperf-database-v2.2.37.zip",
-                "reference": "792b80c499e0af9442ca0b9ecf60dc5f79f09955",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/coordinator/v3.0.3/hyperf-coordinator-v3.0.3.zip",
+                "reference": "df75218d463af1acd98cae9e8f15675b1b64dfee",
                 "shasum": ""
             },
             "require": {
-                "hyperf/macroable": "~2.2.0",
-                "hyperf/utils": "~2.2.8",
+                "hyperf/engine": "^1.2|^2.0",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Coordinator\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Hyperf Coordinator",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "Coordinator",
+                "hyperf",
+                "php",
+                "swoole"
+            ],
+            "time": "2023-01-11T04:01:35+00:00"
+        },
+        {
+            "name": "hyperf/database",
+            "version": "v3.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/database/v3.0.4/hyperf-database-v3.0.4.zip",
+                "reference": "7253376f7e9adcaa167bbd66228ac08fdd5f7134",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/macroable": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
                 "nesbot/carbon": "^2.0",
-                "php": ">=7.2",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/event-dispatcher": "^1.0"
             },
@@ -898,7 +989,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -916,30 +1007,31 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2023-01-19T06:25:51+00:00"
+            "time": "2023-01-19T06:28:09+00:00"
         },
         {
             "name": "hyperf/db-connection",
-            "version": "v2.2.33",
+            "version": "v3.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/db-connection/v2.2.33/hyperf-db-connection-v2.2.33.zip",
-                "reference": "05d2a1e858f01682739e066430b339a9bcdef837",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/db-connection/v3.0.3/hyperf-db-connection-v3.0.3.zip",
+                "reference": "88aa0a30700ad9541f946bf933105900ac813215",
                 "shasum": ""
             },
             "require": {
-                "hyperf/database": "~2.2.0",
-                "hyperf/di": "~2.2.0",
-                "hyperf/framework": "~2.2.0",
-                "hyperf/model-listener": "~2.2.0",
-                "hyperf/pool": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2"
+                "hyperf/database": "~3.0.0",
+                "hyperf/di": "~3.0.0",
+                "hyperf/framework": "~3.0.0",
+                "hyperf/model-listener": "~3.0.0",
+                "hyperf/pool": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
+                "psr/container": "^1.0|^2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\DbConnection\\ConfigProvider"
@@ -961,25 +1053,24 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2023-01-11T10:01:35+00:00"
         },
         {
             "name": "hyperf/di",
-            "version": "v2.2.33",
+            "version": "v3.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/di/v2.2.33/hyperf-di-v2.2.33.zip",
-                "reference": "471c3cf9e0c02ab3aaa0c6e9884062bd541e4577",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/di/v3.0.4/hyperf-di-v3.0.4.zip",
+                "reference": "ead76783e32657eb25fa78caed3c6c065c60eb13",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "^1.6",
                 "doctrine/instantiator": "^1.0",
                 "nikic/php-parser": "^4.1",
-                "php": ">=7.3",
+                "php": ">=8.0",
                 "php-di/phpdoc-reader": "^2.2",
                 "psr/container": "^1.0|^2.0",
-                "symfony/finder": "^5.0",
+                "symfony/finder": "^5.0|^6.0",
                 "vlucas/phpdotenv": "^5.0"
             },
             "suggest": {
@@ -989,7 +1080,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Di\\ConfigProvider"
@@ -1012,20 +1103,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2023-01-20T14:13:09+00:00"
         },
         {
             "name": "hyperf/dispatcher",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/dispatcher/v2.2.33/hyperf-dispatcher-v2.2.33.zip",
-                "reference": "bcffa8faa11367204c4e00e93f6425d600603e03",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/dispatcher/v3.0.0/hyperf-dispatcher-v3.0.0.zip",
+                "reference": "f506c5102583d69b7225fc7045ee707a65d2b4d0",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-middleware": "^1.0"
@@ -1033,7 +1124,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Dispatcher\\ConfigProvider"
@@ -1057,7 +1148,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-08-30T06:33:36+00:00"
         },
         {
             "name": "hyperf/engine",
@@ -1107,16 +1198,16 @@
         },
         {
             "name": "hyperf/event",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/event/v2.2.33/hyperf-event-v2.2.33.zip",
-                "reference": "cd92f5c1218c65f29b15c4d12dcf5835e0426ac8",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/event/v3.0.0/hyperf-event-v3.0.0.zip",
+                "reference": "e10cd5e8b7f02bad9c542c3592b495debba9a39a",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "php": ">=8.0",
                 "psr/event-dispatcher": "^1.0"
             },
             "suggest": {
@@ -1125,7 +1216,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Event\\ConfigProvider"
@@ -1147,29 +1238,29 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-10-13T02:40:13+00:00"
         },
         {
             "name": "hyperf/exception-handler",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/exception-handler/v2.2.33/hyperf-exception-handler-v2.2.33.zip",
-                "reference": "4ec8f6debf530b661bb2b436ef96da53ce0abbdc",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/exception-handler/v3.0.0/hyperf-exception-handler-v3.0.0.zip",
+                "reference": "2c7506e82f81e8c60a8e83168b5af4b9eed05efd",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/dispatcher": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/dispatcher": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/http-message": "^1.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\ExceptionHandler\\ConfigProvider"
@@ -1190,22 +1281,22 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/framework",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/framework/v2.2.33/hyperf-framework-v2.2.33.zip",
-                "reference": "49e98fb747214bcac79aecadda8349e70b8f2891",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/framework/v3.0.0/hyperf-framework-v3.0.0.zip",
+                "reference": "20e0fd40e200285cb5da73c9c8da6669efd7c789",
                 "shasum": ""
             },
             "require": {
                 "fig/http-message-util": "^1.1.2",
-                "hyperf/contract": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/event-dispatcher": "^1.0",
                 "psr/log": "^1.0|^2.0|^3.0"
@@ -1215,12 +1306,12 @@
                 "hyperf/command": "Required to use Command annotation.",
                 "hyperf/di": "Required to use Command annotation.",
                 "hyperf/dispatcher": "Required to use BootApplication event.",
-                "symfony/event-dispatcher": "Required to use symfony event dispatcher (^5.0)."
+                "symfony/event-dispatcher": "Required to use symfony event dispatcher (^5.0|^6.0)."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Framework\\ConfigProvider"
@@ -1244,21 +1335,21 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/guzzle",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/guzzle/v2.2.33/hyperf-guzzle-v2.2.33.zip",
-                "reference": "ef4d6b02778cf44b7f0edefd9c33a5d8d08ad48f",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/guzzle/v3.0.0/hyperf-guzzle-v3.0.0.zip",
+                "reference": "1df78150253171695324216a34558a182095dd0c",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.3|^7.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/http-message": "^1.0"
             },
@@ -1268,7 +1359,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Guzzle\\ConfigProvider"
@@ -1289,20 +1380,21 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/http-message",
-            "version": "v2.2.33",
+            "version": "v3.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/http-message/v2.2.33/hyperf-http-message-v2.2.33.zip",
-                "reference": "d71d796177ec72fe30d116c57ed8bd8121a57b6e",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/http-message/v3.0.1/hyperf-http-message-v3.0.1.zip",
+                "reference": "2f6f4e5079cb445d3c7c6518678cefcd726eaa52",
                 "shasum": ""
             },
             "require": {
-                "hyperf/utils": "~2.2.0",
+                "hyperf/utils": "~3.0.0",
                 "laminas/laminas-mime": "^2.7",
+                "php": ">=8.0",
                 "psr/http-message": "^1.0"
             },
             "suggest": {
@@ -1311,7 +1403,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\HttpMessage\\ConfigProvider"
@@ -1332,28 +1424,28 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2023-01-04T11:57:10+00:00"
         },
         {
             "name": "hyperf/http-server",
-            "version": "v2.2.33",
+            "version": "v3.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/http-server/v2.2.33/hyperf-http-server-v2.2.33.zip",
-                "reference": "0f1f22d408de82c9f8fb3f2cf57457e319210798",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/http-server/v3.0.1/hyperf-http-server-v3.0.1.zip",
+                "reference": "192bed0596d36cb04c38695067e8c60078006109",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/dispatcher": "~2.2.0",
-                "hyperf/event": "~2.2.0",
-                "hyperf/exception-handler": "~2.2.0",
-                "hyperf/http-message": "~2.2.0",
-                "hyperf/macroable": "~2.2.0",
-                "hyperf/server": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/dispatcher": "~3.0.0",
+                "hyperf/event": "~3.0.0",
+                "hyperf/exception-handler": "~3.0.0",
+                "hyperf/http-message": "~3.0.0",
+                "hyperf/macroable": "~3.0.0",
+                "hyperf/server": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
                 "nikic/fast-route": "^1.3",
-                "php": ">=7.2",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0"
             },
             "suggest": {
@@ -1362,7 +1454,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\HttpServer\\ConfigProvider"
@@ -1385,32 +1477,29 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2023-01-04T11:57:10+00:00"
         },
         {
             "name": "hyperf/logger",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/logger/v2.2.33/hyperf-logger-v2.2.33.zip",
-                "reference": "f19929efaeca4aba2b91e7452f4f1b3245bfac51",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/logger/v3.0.0/hyperf-logger-v3.0.0.zip",
+                "reference": "c8de4bc7cd9ccca7c27faf3ebe4e5cfd7380c894",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "monolog/monolog": "^2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "monolog/monolog": "^2.7|^3.1",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/log": "^1.0|^2.0|^3.0"
-            },
-            "conflict": {
-                "monolog/monolog": ">=2.6.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Logger\\ConfigProvider"
@@ -1431,24 +1520,24 @@
                 "logger",
                 "php"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-12-11T04:49:47+00:00"
         },
         {
             "name": "hyperf/macroable",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/macroable/v2.2.33/hyperf-macroable-v2.2.33.zip",
-                "reference": "e4e1b3ed614a5a9d4c24a48b0b3a554eb712af9f",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/macroable/v3.0.0/hyperf-macroable-v3.0.0.zip",
+                "reference": "822de69ba0c75aa9767a9cea487b84bf31d5240a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3"
+                "php": ">=7.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -1467,24 +1556,24 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/memory",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/memory/v2.2.33/hyperf-memory-v2.2.33.zip",
-                "reference": "8adfac46a0f52385a4ad2e8bc4f956c34cb6f25e",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/memory/v3.0.0/hyperf-memory-v3.0.0.zip",
+                "reference": "c7217c9b5177562329074d332f9e13b40693bdfe",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2"
+                "php": ">=7.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Memory\\ConfigProvider"
@@ -1506,30 +1595,30 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/model-listener",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/model-listener/v2.2.33/hyperf-model-listener-v2.2.33.zip",
-                "reference": "0ac64b517db0d9e192650cd70f81a2962cd54e63",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/model-listener/v3.0.0/hyperf-model-listener-v3.0.0.zip",
+                "reference": "50c7bffdbab5eb3828d6314b3d1de427c0e80704",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/database": "~2.2.0",
-                "hyperf/di": "~2.2.0",
-                "hyperf/event": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/database": "~3.0.0",
+                "hyperf/di": "~3.0.0",
+                "hyperf/event": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\ModelListener\\ConfigProvider"
@@ -1551,20 +1640,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-05-30T02:16:40+00:00"
         },
         {
             "name": "hyperf/paginator",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/paginator/v2.2.33/hyperf-paginator-v2.2.33.zip",
-                "reference": "dc9429ecbd579ef54fa81be9c1de149248f87d0a",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/paginator/v3.0.0/hyperf-paginator-v3.0.0.zip",
+                "reference": "45acff6623c65769949665d61e7af145082aea09",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
                 "php": ">=7.2"
             },
             "suggest": {
@@ -1575,7 +1664,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Paginator\\ConfigProvider"
@@ -1596,27 +1685,27 @@
                 "paginator",
                 "php"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/pool",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/pool/v2.2.33/hyperf-pool-v2.2.33.zip",
-                "reference": "b66965453f404f09570a166e9c103a074d2dbd4e",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/pool/v3.0.0/hyperf-pool-v3.0.0.zip",
+                "reference": "6a937ff363b84208c26cf918490a07d38ab0c987",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Pool\\ConfigProvider"
@@ -1638,21 +1727,21 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-26T11:47:54+00:00"
         },
         {
             "name": "hyperf/process",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/process/v2.2.33/hyperf-process-v2.2.33.zip",
-                "reference": "a93b2a4bf0455e3f639649046705e7b3b6ccd137",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/process/v3.0.0/hyperf-process-v3.0.0.zip",
+                "reference": "a8f7589cdde9037b313626c4d34012c8ee5be263",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/event-dispatcher": "^1.0"
             },
@@ -1664,7 +1753,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Process\\ConfigProvider"
@@ -1685,23 +1774,23 @@
                 "php",
                 "process"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-01T02:50:54+00:00"
         },
         {
             "name": "hyperf/redis",
-            "version": "v2.2.33",
+            "version": "v3.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/redis/v2.2.33/hyperf-redis-v2.2.33.zip",
-                "reference": "f0b858bec45b479d7b8cc4a70a792b144a6a680e",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/redis/v3.0.2/hyperf-redis-v3.0.2.zip",
+                "reference": "b5e59c2612bf3f6b6fd5d024e25c973a72f62fbe",
                 "shasum": ""
             },
             "require": {
                 "ext-redis": "*",
-                "hyperf/contract": "~2.2.0",
-                "hyperf/pool": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/pool": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0"
             },
             "suggest": {
@@ -1711,7 +1800,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Redis\\ConfigProvider"
@@ -1733,25 +1822,25 @@
                 "pool",
                 "redis"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2023-01-09T08:49:03+00:00"
         },
         {
             "name": "hyperf/server",
-            "version": "v2.2.33",
+            "version": "v3.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/server/v2.2.33/hyperf-server-v2.2.33.zip",
-                "reference": "1d3364520e37777a7ed83d8bc1597da42f8d6c1b",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/server/v3.0.1/hyperf-server-v3.0.1.zip",
+                "reference": "86bbb65dece6dab5638b57fa0a1154686dd0f089",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/event-dispatcher": "^1.0",
                 "psr/log": "^1.0|^2.0|^3.0",
-                "symfony/console": "^5.0"
+                "symfony/console": "^5.0|^6.0"
             },
             "suggest": {
                 "hyperf/event": "Dump the info after server start.",
@@ -1760,7 +1849,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Server\\ConfigProvider"
@@ -1782,32 +1871,33 @@
                 "server",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2023-01-06T07:51:18+00:00"
         },
         {
             "name": "hyperf/utils",
-            "version": "v2.2.34",
+            "version": "v3.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/utils/v2.2.34/hyperf-utils-v2.2.34.zip",
-                "reference": "9c8519392166a6c8057cc52f7d02e1ac638581f5",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/utils/v3.0.1/hyperf-utils-v3.0.1.zip",
+                "reference": "3955bd117bb04579f1fe5644682a4e4c207521d4",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^2.0",
-                "hyperf/context": "~2.2.0",
-                "hyperf/contract": "~2.2.0",
-                "hyperf/engine": "^1.1",
-                "hyperf/macroable": "~2.2.0",
+                "hyperf/context": "~3.0.0",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/coordinator": "~3.0.0",
+                "hyperf/engine": "^1.2|^2.0",
+                "hyperf/macroable": "~3.0.0",
                 "php": ">=7.2"
             },
             "suggest": {
                 "ext-swoole": "Required to use methods related to swoole (>=4.5).",
                 "hyperf/di": "Required to use ExceptionNormalizer",
                 "nikic/php-parser": "Required to use PhpParser. (^4.0)",
-                "symfony/property-access": "Required to use SymfonyNormalizer (^5.0)",
-                "symfony/serializer": "Required to use SymfonyNormalizer (^5.0)",
-                "symfony/var-dumper": "Required to use the dd function (^5.0)."
+                "symfony/property-access": "Required to use SymfonyNormalizer (^5.0|^6.0)",
+                "symfony/serializer": "Required to use SymfonyNormalizer (^5.0|^6.0)",
+                "symfony/var-dumper": "Required to use the dd function (^5.0|^6.0)."
             },
             "type": "library",
             "extra": {
@@ -1815,7 +1905,7 @@
                     "config": "Hyperf\\Utils\\ConfigProvider"
                 },
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -1837,30 +1927,30 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2022-07-21T05:42:54+00:00"
+            "time": "2023-01-04T11:57:10+00:00"
         },
         {
             "name": "hyperf/websocket-server",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/websocket-server/v2.2.33/hyperf-websocket-server-v2.2.33.zip",
-                "reference": "ef6e1ed5de23555b7f33c5423f2fab146367ae1d",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/websocket-server/v3.0.0/hyperf-websocket-server-v3.0.0.zip",
+                "reference": "e48b49751a4bc2a0202bcaf34e6b492d57e15c79",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/exception-handler": "~2.2.0",
-                "hyperf/http-server": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/exception-handler": "~3.0.0",
+                "hyperf/http-server": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "psr/container": "^1.0|^2.0",
                 "psr/event-dispatcher": "^1.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\WebSocketServer\\ConfigProvider"
@@ -1882,7 +1972,7 @@
                 "swoole",
                 "websocket"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-11-28T08:56:48+00:00"
         },
         {
             "name": "laminas/laminas-mime",
@@ -1966,35 +2056,38 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.5.0",
+            "version": "3.2.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/monolog/monolog/2.5.0/monolog-monolog-2.5.0.zip",
-                "reference": "4192345e260f1d51b365536199744b987e160edc",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/monolog/monolog/3.2.0/monolog-monolog-3.2.0.zip",
+                "reference": "305444bc6fb6c89e490f4b34fa6e979584d7fa81",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
-                "psr/log": "^1.0.1 || ^2.0 || ^3.0"
+                "php": ">=8.1",
+                "psr/log": "^2.0 || ^3.0"
             },
             "provide": {
-                "psr/log-implementation": "1.0.0 || 2.0.0 || 3.0.0"
+                "psr/log-implementation": "3.0.0"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "aws/aws-sdk-php": "^3.0",
                 "doctrine/couchdb": "~1.0@dev",
-                "elasticsearch/elasticsearch": "^7",
+                "elasticsearch/elasticsearch": "^7 || ^8",
+                "ext-json": "*",
                 "graylog2/gelf-php": "^1.4.2",
+                "guzzlehttp/guzzle": "^7.4",
+                "guzzlehttp/psr7": "^2.2",
                 "mongodb/mongodb": "^1.8",
                 "php-amqplib/php-amqplib": "~2.4 || ^3",
-                "php-console/php-console": "^3.1.3",
-                "phpspec/prophecy": "^1.6.1",
-                "phpstan/phpstan": "^0.12.91",
-                "phpunit/phpunit": "^8.5",
+                "phpstan/phpstan": "^1.4",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "phpunit/phpunit": "^9.5.16",
                 "predis/predis": "^1.1",
-                "rollbar/rollbar": "^1.3 || ^2 || ^3",
-                "ruflin/elastica": ">=0.90@dev",
-                "swiftmailer/swiftmailer": "^5.3|^6.0"
+                "ruflin/elastica": "^7",
+                "symfony/mailer": "^5.4 || ^6",
+                "symfony/mime": "^5.4 || ^6"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -2009,14 +2102,13 @@
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
-                "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.x-dev"
+                    "dev-main": "3.x-dev"
                 }
             },
             "autoload": {
@@ -2041,7 +2133,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2022-04-08T15:43:54+00:00"
+            "time": "2022-07-24T12:00:55+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2645,11 +2737,11 @@
         },
         {
             "name": "psr/log",
-            "version": "2.0.0",
+            "version": "3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/log/2.0.0/psr-log-2.0.0.zip",
-                "reference": "ef29f6d262798707a9edd554e2b82517ef3a9376",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/log/3.0.0/psr-log-3.0.0.zip",
+                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
                 "shasum": ""
             },
             "require": {
@@ -2658,7 +2750,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
@@ -2682,24 +2774,24 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2021-07-14T16:41:46+00:00"
+            "time": "2021-07-14T16:46:02+00:00"
         },
         {
             "name": "psr/simple-cache",
-            "version": "1.0.1",
+            "version": "3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/simple-cache/1.0.1/psr-simple-cache-1.0.1.zip",
-                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/simple-cache/3.0.0/psr-simple-cache-3.0.0.zip",
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=8.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -2713,7 +2805,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interfaces for simple caching",
@@ -2724,7 +2816,7 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "time": "2017-10-23T01:57:42+00:00"
+            "time": "2021-10-29T13:26:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -2762,41 +2854,38 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.4.11",
+            "version": "v6.2.5",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/console/v5.4.11/symfony-console-v5.4.11.zip",
-                "reference": "535846c7ee6bc4dd027ca0d93220601456734b10",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/console/v6.2.5/symfony-console-v6.2.5.zip",
+                "reference": "3e294254f2191762c1d137aed4b94e966965e985",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
+                "php": ">=8.1",
                 "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-mbstring": "~1.0",
-                "symfony/polyfill-php73": "^1.9",
-                "symfony/polyfill-php80": "^1.16",
                 "symfony/service-contracts": "^1.1|^2|^3",
-                "symfony/string": "^5.1|^6.0"
+                "symfony/string": "^5.4|^6.0"
             },
             "conflict": {
-                "psr/log": ">=3",
-                "symfony/dependency-injection": "<4.4",
-                "symfony/dotenv": "<5.1",
-                "symfony/event-dispatcher": "<4.4",
-                "symfony/lock": "<4.4",
-                "symfony/process": "<4.4"
+                "symfony/dependency-injection": "<5.4",
+                "symfony/dotenv": "<5.4",
+                "symfony/event-dispatcher": "<5.4",
+                "symfony/lock": "<5.4",
+                "symfony/process": "<5.4"
             },
             "provide": {
-                "psr/log-implementation": "1.0|2.0"
+                "psr/log-implementation": "1.0|2.0|3.0"
             },
             "require-dev": {
-                "psr/log": "^1|^2",
-                "symfony/config": "^4.4|^5.0|^6.0",
-                "symfony/dependency-injection": "^4.4|^5.0|^6.0",
-                "symfony/event-dispatcher": "^4.4|^5.0|^6.0",
-                "symfony/lock": "^4.4|^5.0|^6.0",
-                "symfony/process": "^4.4|^5.0|^6.0",
-                "symfony/var-dumper": "^4.4|^5.0|^6.0"
+                "psr/log": "^1|^2|^3",
+                "symfony/config": "^5.4|^6.0",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/event-dispatcher": "^5.4|^6.0",
+                "symfony/lock": "^5.4|^6.0",
+                "symfony/process": "^5.4|^6.0",
+                "symfony/var-dumper": "^5.4|^6.0"
             },
             "suggest": {
                 "psr/log": "For using the console logger",
@@ -2834,7 +2923,7 @@
                 "console",
                 "terminal"
             ],
-            "time": "2022-07-22T10:42:43+00:00"
+            "time": "2023-01-01T08:38:09+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3152,62 +3241,6 @@
             "keywords": [
                 "compatibility",
                 "mbstring",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2022-11-03T14:55:06+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php73",
-            "version": "v1.27.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-php73/v1.27.0/symfony-polyfill-php73-v1.27.0.zip",
-                "reference": "9e8ecb5f92152187c4799efd3c96b78ccab18ff9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.27-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
                 "polyfill",
                 "portable",
                 "shim"
@@ -3858,24 +3891,24 @@
         },
         {
             "name": "hyperf/devtool",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/devtool/v2.2.33/hyperf-devtool-v2.2.33.zip",
-                "reference": "f447311bf7507ff2b13658250ef3bcff7a9bc881",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/devtool/v3.0.0/hyperf-devtool-v3.0.0.zip",
+                "reference": "715167d5160261c5f87ef82def1298ad6edb19ad",
                 "shasum": ""
             },
             "require": {
-                "hyperf/command": "~2.2.0",
-                "hyperf/contract": "~2.2.0",
-                "hyperf/di": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2"
+                "hyperf/command": "~3.0.0",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/di": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Devtool\\ConfigProvider"
@@ -3897,21 +3930,21 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-12-10T13:24:37+00:00"
         },
         {
             "name": "hyperf/ide-helper",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/ide-helper/v2.2.33/hyperf-ide-helper-v2.2.33.zip",
-                "reference": "e7e26af552f7cf5512c357df9604ff9aa77ed3f3",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/ide-helper/v3.0.0/hyperf-ide-helper-v3.0.0.zip",
+                "reference": "14d8a8ee13435a05e1ecf1d2b0e276efbcc82366",
                 "shasum": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "license": [
@@ -3925,23 +3958,23 @@
                 "php",
                 "swoole"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-05-30T02:16:40+00:00"
         },
         {
             "name": "hyperf/testing",
-            "version": "v2.2.33",
+            "version": "v3.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/testing/v2.2.33/hyperf-testing-v2.2.33.zip",
-                "reference": "63726e3b4e999a96dd4dd62a54f8b2f8f48f850e",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/testing/v3.0.1/hyperf-testing-v3.0.1.zip",
+                "reference": "b4e9ed466a192e5af72b3d456d11da1d54304c54",
                 "shasum": ""
             },
             "require": {
-                "hyperf/contract": "~2.2.0",
-                "hyperf/http-message": "~2.2.0",
-                "hyperf/http-server": "~2.2.0",
-                "hyperf/utils": "~2.2.0",
-                "php": ">=7.2",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/http-message": "~3.0.0",
+                "hyperf/http-server": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
                 "phpunit/phpunit": "^9.5",
                 "psr/container": "^1.0|^2.0"
             },
@@ -3951,7 +3984,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -3968,34 +4001,37 @@
                 "swoole",
                 "testing"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2023-01-04T11:57:10+00:00"
         },
         {
             "name": "hyperf/watcher",
-            "version": "v2.2.33",
+            "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/watcher/v2.2.33/hyperf-watcher-v2.2.33.zip",
-                "reference": "bee6a3dbc67a355fc608d44242f1be8cfec97b2f",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/watcher/v3.0.0/hyperf-watcher-v3.0.0.zip",
+                "reference": "2fa0770171d3e1d7576f3c66a9cbeb479fe1daca",
                 "shasum": ""
             },
             "require": {
-                "ext-swoole": ">=4.5",
-                "hyperf/command": "~2.2.0",
-                "hyperf/di": "~2.2.0",
-                "hyperf/framework": "~2.2.0",
-                "php": ">=7.2"
+                "ext-posix": "*",
+                "hyperf/command": "~3.0.0",
+                "hyperf/di": "~3.0.0",
+                "hyperf/framework": "~3.0.0",
+                "php": ">=8.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Watcher\\ConfigProvider"
                 }
             },
             "autoload": {
+                "files": [
+                    "src/Functions.php"
+                ],
                 "psr-4": {
                     "Hyperf\\Watcher\\": "src/"
                 }
@@ -4008,7 +4044,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2022-05-24T13:10:54+00:00"
+            "time": "2022-12-27T02:58:03+00:00"
         },
         {
             "name": "mockery/mockery",
