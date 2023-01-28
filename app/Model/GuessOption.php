@@ -23,17 +23,17 @@ class GuessOption extends Model
      *
      * @var string
      */
-    protected $table = 'guess_options';
+    protected ?string $table = 'guess_options';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [];
+    protected array $fillable = [];
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = ['id' => 'integer', 'project_id' => 'integer', 'score' => 'integer', 'jump' => 'integer', 'correct' => 'integer', 'status' => 'integer', 'option_id' => 'integer'];
+    protected array $casts = ['id' => 'integer', 'project_id' => 'integer', 'score' => 'integer', 'jump' => 'integer', 'correct' => 'integer', 'status' => 'integer', 'option_id' => 'integer'];
 }

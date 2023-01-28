@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad220648109eca0155ba272f2940807f",
+    "content-hash": "84422b5b2cdae452dd4454fd726ed564",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3628,6 +3628,97 @@
                 "environment"
             ],
             "time": "2022-10-16T01:01:54+00:00"
+        },
+        {
+            "name": "yurunsoft/pay-sdk",
+            "version": "v3.1.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/yurunsoft/pay-sdk/v3.1.5/yurunsoft-pay-sdk-v3.1.5.zip",
+                "reference": "c423f62ba9d0bbbc545d1d1bcd4bc45563e83289",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "yurunsoft/yurun-http": "~4.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.18.3"
+            },
+            "bin": [
+                "src/Weixin/Tool/CertificateDownloader.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yurun\\PaySDK\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP 集成支付 SDK ，集成了支付宝、微信支付的支付接口和其它相关接口的操作。",
+            "time": "2022-07-08T01:05:11+00:00"
+        },
+        {
+            "name": "yurunsoft/yurun-http",
+            "version": "v4.4.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/yurunsoft/yurun-http/v4.4.1/yurunsoft-yurun-http-v4.4.1.zip",
+                "reference": "da976f460a752449de57cb6eb701f754cce2db1b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "psr/http-message": "~1.0",
+                "psr/log": "~1.0|~2.0|~3.0"
+            },
+            "require-dev": {
+                "monolog/monolog": "*",
+                "phpunit/phpunit": ">=4",
+                "swoole/ide-helper": "^4.5",
+                "workerman/workerman": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yurun\\Util\\": "./src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "YurunHttp 是开源的 PHP HTTP 类库，支持链式操作，简单易用。支持 Curl、Swoole，支持 Http、Http2、WebSocket！",
+            "time": "2022-12-23T05:20:14+00:00"
+        },
+        {
+            "name": "yurunsoft/yurun-oauth-login",
+            "version": "v3.0.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/yurunsoft/yurun-oauth-login/v3.0.6/yurunsoft-yurun-oauth-login-v3.0.6.zip",
+                "reference": "3f67cc3ead9e14963fd0a40efe066530fac60746",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "yurunsoft/yurun-http": "~4.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.18.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yurun\\OAuthLogin\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "YurunOAuthLogin是一个PHP 第三方登录授权 SDK，集成了QQ、微信、微博、Github等常用接口。",
+            "time": "2021-12-07T05:56:44+00:00"
         }
     ],
     "packages-dev": [

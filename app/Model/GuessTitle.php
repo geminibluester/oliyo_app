@@ -24,17 +24,17 @@ class GuessTitle extends Model
      *
      * @var string
      */
-    protected $table = 'guess_title';
+    protected ?string $table = 'guess_title';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [];
+    protected array $fillable = [];
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = ['id' => 'integer', 'title_id' => 'integer', 'auth_type' => 'integer', 'category' => 'integer', 'class_id' => 'integer', 'is_show' => 'integer'];
+    protected array $casts = ['id' => 'integer', 'title_id' => 'integer', 'auth_type' => 'integer', 'category' => 'integer', 'class_id' => 'integer', 'is_show' => 'integer'];
 }

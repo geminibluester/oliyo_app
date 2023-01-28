@@ -18,17 +18,17 @@ class GuessCategory extends Model
      *
      * @var string
      */
-    protected $table = 'guess_category';
+    protected ?string $table = 'guess_category';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [];
+    protected array $fillable = [];
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = ['id' => 'integer', 'is_show' => 'integer', 'remote_key' => 'integer'];
+    protected array $casts = ['id' => 'integer', 'is_show' => 'integer', 'remote_key' => 'integer'];
 }

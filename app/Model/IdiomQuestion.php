@@ -24,17 +24,17 @@ class IdiomQuestion extends Model
      *
      * @var string
      */
-    protected $table = 'idiom_question';
+    protected ?string $table = 'idiom_question';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [];
+    protected array $fillable = [];
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = ['id' => 'integer', 'idoim_id' => 'integer', 'nandu' => 'integer', 'score' => 'integer', 'played' => 'integer', 'viewed' => 'integer', 'status' => 'integer', 'errored' => 'integer'];
+    protected array $casts = ['id' => 'integer', 'idoim_id' => 'integer', 'nandu' => 'integer', 'score' => 'integer', 'played' => 'integer', 'viewed' => 'integer', 'status' => 'integer', 'errored' => 'integer'];
 }

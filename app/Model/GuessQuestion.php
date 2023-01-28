@@ -22,17 +22,17 @@ class GuessQuestion extends Model
      *
      * @var string
      */
-    protected $table = 'guess_question';
+    protected ?string $table = 'guess_question';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [];
+    protected array $fillable = [];
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = ['id' => 'integer', 'question_id' => 'integer', 'title_id' => 'integer', 'image_type' => 'integer', 'sorting' => 'integer', 'status' => 'integer'];
+    protected array $casts = ['id' => 'integer', 'question_id' => 'integer', 'title_id' => 'integer', 'image_type' => 'integer', 'sorting' => 'integer', 'status' => 'integer'];
 }

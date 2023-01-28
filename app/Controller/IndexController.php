@@ -18,9 +18,8 @@ use App\Service\GameService;
 
 class IndexController extends AbstractController
 {
+    #[Inject(lazy: true)]
     /**
-     * @Inject()
-     * 
      * @var GameService
      */
     private GameService $game;

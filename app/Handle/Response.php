@@ -14,8 +14,8 @@ use Swoole\Server;
 
 class Response implements ResponseInterface
 {
+    #[Inject]
     /**
-     * @Inject
      * @var ResponseInterface
      */
 

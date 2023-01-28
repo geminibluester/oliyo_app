@@ -22,20 +22,20 @@ use Psr\Log\LoggerInterface;
 
 abstract class AbstractController
 {
+    #[Inject]
     /**
-     * @Inject()
      * @var ContainerInterface
      */
     protected Container $container;
 
+    #[Inject]
     /**
-     * @Inject()
      * @var RequestInterfaces
      */
     protected RequestInterface $request;
 
+    #[Inject]
     /**
-     * @Inject()
      * @var Response
      */
     protected Response $response;

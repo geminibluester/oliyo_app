@@ -22,17 +22,17 @@ class Idiom extends Model
      *
      * @var string
      */
-    protected $table = 'idiom';
+    protected ?string $table = 'idiom';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [];
+    protected array $fillable = [];
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = ['id' => 'integer', 'difficulty' => 'integer'];
+    protected array $casts = ['id' => 'integer', 'difficulty' => 'integer'];
 }
