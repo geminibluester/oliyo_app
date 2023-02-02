@@ -28,4 +28,8 @@ class IndexController extends AbstractController
         $qustions = $this->game->getNormalList();
         return $this->response->success($qustions);
     }
+    public function play() {
+
+    }
+
 }
