@@ -15,6 +15,7 @@ use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Stream\SwooleStream;
 use Psr\Http\Message\ResponseInterface;
+use Hyperf\Validation\ValidationException;
 use Throwable;
 
 class AppExceptionHandler extends ExceptionHandler
@@ -27,7 +28,19 @@ class AppExceptionHandler extends ExceptionHandler
     {
         $this->logger->error(sprintf('%s[%s] in %s', $throwable->getMessage(), $throwable->getLine(), $throwable->getFile()));
         $this->logger->error($throwable->getTraceAsString());
-        return $response->withHeader('Server', 'Hyperf')->withStatus(500)->withBody(new SwooleStream('Internal Server Error.'));
+        // $this->stopPropagation();
+        $data = [
+            'code'=>$throwable->getCode(),
+            'msg'=>$throwable->getMessage(),
+            'body'=>null
+        ];
+        if($throwable instanceof ValidationException ) {
+            $data['body'] = $throwable->validator->errors()->all();
+        }
+        return $response->withHeader('Server', 'Oliyo_App')
+        ->withAddedHeader('content-type', 'application/json;')
+        ->withStatus(500)
+        ->withBody(new SwooleStream(json_encode($data,JSON_UNESCAPED_UNICODE)));
     }
 
     public function isValid(Throwable $throwable): bool

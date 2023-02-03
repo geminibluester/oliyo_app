@@ -14,8 +14,8 @@ class BaseService
      * @var LoggerInterface
      */
     protected $log;
+    #[Inject]
     /**
-     * @Inject()
      * @var ContainerInterface
      */
     protected Container $container;

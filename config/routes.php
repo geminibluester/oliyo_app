@@ -13,6 +13,7 @@ declare(strict_types=1);
 use Hyperf\HttpServer\Router\Router;
 
 Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController@index');
+Router::addRoute(['GET', 'POST'], '/sx/pd', 'App\Controller\ShengXiaoController@find');
 Router::addServer('ws', function () {
     Router::get('/', 'App\Controller\WebSocketController');
 });
